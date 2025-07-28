@@ -1,11 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWASTHYAMITRA</title>
+    <link rel="stylesheet" href="./assets/css/landing-page.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1f8fff",
+              primaryglow: "#e5f2ff",
+              secondary: "#5b99f1",
+              secondaryglow: "#e8f0fd",
+              background: "#ffffff",
+              muted: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="shadow sticky bg-white top-0 z-50">
+      <div class="container mx-auto px-4 p-4 items-center">
+        <div class="flex justify-between">
+          <div class="flex">
+            <h1
+              class="text-2xl font-medium text-primary hover:font-bold w-20 transition"
+            >
+              स्वास्थ्यmitra
+            </h1>
+            <!-- <img src="./assets/images/SwasthyaMitra.png" alt="" class="w-32 h-14 ">-->
+          </div>
+          <nav class="flex gap-4 text-lg hidden md:flex">
+            <a href="#" class="text-md hover:text-primary transistion">Home</a>
+            <a href="#" class="text-md hover:text-primary transition"
+              >Find Doctors</a
+            >
+            <a href="#" class="text-md hover:text-primary transition"
+              >Specialist</a
+            >
+            <a href="#" class="text-md hover:text-primary transition">Blogs</a>
+            <a href="#" class="text-md hover:text-primary transition"
+              >Contact</a
+            >
+            <a href="#" class="text-md hover:text-primary transition"
+              >Book Appointment</a
+            >
+          </nav>
+          <div class="flex gap-4 text-lg">
+            <a href="#">Login</a>
+            <a
+              href="#"
+              class="bg-primary text-white px-1 rounded-md hover:bg-secondary transition"
+            >
+              Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="py-16 md:py-24 bg-gradient-to-r from-primaryglow via-background to-secondayglow"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- left content -->
+            <div class="md:w-1/2 mb-10">
+              <h1 class="text-4xl font-bold mb-4">
+                Your Health, <span class="text-primary"> Our Priority</span>
+              </h1>
+              <p class="text-lg text-gray-600">
+                Connect with qualified doctors across Nepal. Book appointments,
+                get consultations, and manage your health journey with
+                स्वास्थ्यmitra.
+              </p>
+
+              <div class="mt-8 flex w-1  gap-3">
+                <div class="mr-2 px-12 py-3 rounded border">
+                  <h3 class="text-primary font-semibold flex justify-center">
+                    100+
+                  </h3>
+                  <p class="text-gray-600">Doctors</p>
+                </div>
+                <div class="mr-2 px-12 py-3 rounded border">
+                  <h3 class="text-primary font-semibold flex justify-center">
+                    50+
+                  </h3>
+                  <p class="text-gray-600">Hospitals</p>
+                </div>
+                <div class="mr-2 px-12 py-3 rounded border">
+                  <h3 class="text-primary font-semibold flex justify-center">
+                    30k+
+                  </h3>
+                  <p class="text-gray-600">Patients</p>
+                </div>
+              </div>
+              <!-- Button -->
+              <div class="mt-8 flex flex-col md:flex-row gap-3">
+                <a
+                  href="#"
+                  class="bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition"
+                  ><i class="fa-solid fa-magnifying-glass"></i> Find Doctors</a
+                >
+                <a
+                  href="#"
+                  class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+                >
+                  <i class="fa-solid fa-location-dot"></i> Emergency Services</a
+                >
+              </div>
+              <!-- <div>
+                <a href="#" class="mt-8 flex"><i class="fa-solid fa-star-half-stroke"></i>4/5 ratings</a>
+              </div> -->
+            </div>
+            <!-- right content -->
+            <div>
+              <img
+                src="./assets/images/heroimagedoctor.jpg"
+                alt=""
+                class="object-cover rounded-lg hover:shadow-lg transition hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our services -->
+      <section class="py-16 md:py-24">
+        <div class="">
+          <h1 class="text-4xl font-bold mb-4 text-center">
+            Our Medical Services
+          </h1>
+          <p class="text-lg text-gray-600 text-center">
+            We offer a comprehensive range of medical services with
+            state-of-the-art facilities and experienced healthcare
+            professionals.
+          </p>
+        </div>
+      </section>
+      <!-- about -->
+      <section class="py-16 md:py-24">
+        <div class="">
+          <h2 class="text-3xl font-bold mb-4 text-center text-primary">
+            About स्वास्थ्यmitra
+          </h2>
+          <p class="text-lg text-gray-600 text-center">
+            A Nepal-focused healthcare platform built with modern technology to
+            connect patients with qualified healthcare professionals across the
+            country. Through advanced medical technologies, cutting‑edge
+            treatments, and a patient‑centered approach, we strive every day to
+            elevate the health and well‑being of those we serve. Above all, we
+            ensure that each patient feels respected, seen, and cared for with
+            dignity.We commit to improving lives through state‑of‑the‑art
+            technologies, evidence‑based innovation, and a compassionate team of
+            professionals—serving all, regardless of background or circumstance.
+            With advanced facilities and a multidisciplinary team, we aim to
+            raise the standard of care—ensuring each patient’s journey is safe,
+            respectful, and results‑driven.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
