@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/SwasthyaMitra.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1f8fff",
+              primaryglow: "#e5f2ff",
+              primarylight: "#66b3ff",
+              secondary: "#5b99f1",
+              secondaryglow: "#e8f0fd",
+              background: "#ffffff",
+              muted: "#f8fafc",
+              foreground: "#344256",
+              destructive: "#ef4444",
+            },
+            animation: {
+              "accordion-down": "accordion-down 0.2s ease-out",
+              "accordion-up": "accordion-up 0.2s ease-out",
+              "fade-in": "fade-in 0.6s ease-out",
+              "slide-in-right": "slide-in-right 0.5s ease-out",
+              float: "float 3s ease-in-out infinite",
+              "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+            },
+            keyframes: {
+              "accordion-down": {
+                from: { height: "0" },
+                to: { height: "var(--radix-accordion-content-height)" },
+              },
+              "accordion-up": {
+                from: { height: "var(--radix-accordion-content-height)" },
+                to: { height: "0" },
+              },
+              "fade-in": {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              "slide-in-right": {
+                "0%": { transform: "translateX(100%)" },
+                "100%": { transform: "translateX(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              "pulse-glow": {
+                "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
+                "50%": { boxShadow: "0 0 30px hsl(var(--primary) / 0.6)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section
+      class="min-h-screen bg-gradient-to-r from-primaryglow via-background to-secondayglow"
+    >
+      <!-- Back Button  -->
+      <div class="absolute top-4 left-4 z-10">
+        <a
+          href="#"
+          class="inline-flex items-center ml-3 text-primary hover:text-primary-light transition duration-300 hover:scale-105"
+          ><i class="fa-solid fa-arrow-left w-4 h-4 mr-2"></i> Back to Home</a
+        >
+      </div>
+
+      <div class="flex min-h-screen">
+        <div class="flex-1 flex items-center justify-center p-4 lg:p-8">
+          <!-- Left Side Content  -->
+          <div class="w-full max-w-md space-y-6">
+            <!-- Roles, Login Form  -->
+            <div class="flex flex-col items-center justify-center">
+              <!-- Header Text  -->
+              <div class="text-center items-center mt-10 mb-4">
+                <h1 class="text-4xl font-bold text-primary mb-1 animate-scale-in">
+                  स्वास्थ्यmitra
+                </h1>
+                <p class="text-gray-700">
+                  Welcome! Please sign in to continue.
+                </p>
+              </div>
+
+              <!-- Sign up / Sign in Toggle  -->
+              <div class="flex gap-4 mb-5">
+                <a
+                  href="#"
+                  class="border shadow rounded-lg py-2 px-6 bg-primary text-white hover:bg-primarylight transition duration-300"
+                  >Sign In</a
+                >
+                <a
+                  href="user-signup.html"
+                  class="border border-primary text-primary shadow rounded-lg py-2 px-6 hover:bg-primary hover:text-white transition duration-300"
+                  >Sign Up</a
+                >
+              </div>
+
+              <!-- Roles Selection  -->
+              <div
+                class="w-full max-w-md border rounded-lg shadow p-2 bg-white mb-3 hover:shadow-lg transition duration-300"
+              >
+                <div class="text-center p-3">
+                  <h3 class="font-semibold text-xl text-center text-gray-700">
+                    Select Your Role
+                  </h3>
+                </div>
+
+                <div
+                  class="grid grid-cols-1 gap-4 p-3 justify-center items-center"
+                >
+                  <!-- Patient -->
+                  <label>
+                    <input
+                      type="radio"
+                      name="role"
+                      value="patient"
+                      checked
+                      class="sr-only peer"
+                    />
+                    <div
+                      class="w-full p-3 flex gap-2 rounded-lg border peer-checked:text-primary border-primary shadow-primary text-left bg-primary/5 shadow-primary peer-checked:scale-105 hover:border-primary/50 hover:bg-muted/50 peer-checked:bg-blue-100 peer-checked:border-blue-500 cursor-pointer duration-300 transition"
+                    >
+                      <div class="flex items-center">
+                        <i class="fa-regular fa-user"></i>
+                      </div>
+                      <div class="text-left">
+                        <p>Patient</p>
+                        <p class="text-sm text-gray-600">
+                          Book appointments and manage health
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Doctor -->
+                  <label>
+                    <input
+                      type="radio"
+                      name="role"
+                      value="doctor"
+                      class="sr-only peer"
+                    />
+                    <div
+                      class="w-full p-3 flex gap-2 rounded-lg border peer-checked:text-primary border-primary shadow-primary text-left bg-primary/5 shadow-primary peer-checked:scale-105 hover:border-primary/50 hover:bg-muted/50 peer-checked:bg-blue-100 peer-checked:border-blue-500 cursor-pointer duration-300 transition"
+                    >
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-user-doctor"></i>
+                      </div>
+                      <div class="text-left">
+                        <p>Doctor</p>
+                        <p class="text-sm text-gray-600">
+                          Manage patient records and appointments
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+
+                  <!-- Hospital  -->
+                  <label>
+                    <input
+                      type="radio"
+                      name="role"
+                      value="hospital"
+                      class="sr-only peer"
+                    />
+                    <div
+                      class="w-full p-3 flex gap-2 rounded-lg border peer-checked:text-primary border-primary shadow-primary text-left bg-primary/5 shadow-primary peer-checked:scale-105 hover:border-primary/50 hover:bg-muted/50 peer-checked:bg-blue-100 peer-checked:border-blue-500 cursor-pointer duration-300 transition"
+                    >
+                      <div class="flex items-center">
+                        <i class="fa-regular fa-hospital"></i>
+                      </div>
+                      <div class="text-left">
+                        <p>Admin</p>
+                        <p class="text-sm text-gray-600">
+                          Manage facilities, doctors, and patients
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Login Form  -->
+              <div
+                class="w-full max-w-md hover:shadow-lg transition duration-300"
+              >
+                <form action="">
+                  <div class="border rounded-lg shadow p-2 bg-white">
+                    <div class="text-center p-3">
+                      <h3
+                        class="font-semibold text-xl text-center text-gray-700"
+                      >
+                        Sign in as Patient
+                      </h3>
+                    </div>
+
+                    <div class="p-3 relative">
+                      <div class="mb-3">
+                        <label
+                          for="email"
+                          class="block mb-2 text-sm font-semibold text-foreground"
+                          >Email Address</label
+                        >
+                        <i
+                          class="absolute top-12 left-4 text-foreground hover:text-primary duration-300 fa-regular fa-envelope"
+                        ></i>
+                        <input
+                          type="email"
+                          id="email"
+                          class="pl-7 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:outline-primary focus:shadow-primary/20 focus:shadow-lg block w-full p-2 transition duration-300"
+                          placeholder="Enter your email"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label
+                          for="password"
+                          class="block mb-2 text-sm font-medium"
+                          >Password</label
+                        >
+                        <i
+                          class="absolute top-32 left-4 text-foreground hover:text-primary duration-300 fa-solid fa-lock"
+                        ></i>
+                        <input
+                          type="password"
+                          id="password"
+                          class="pl-7 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:outline-primary focus:shadow-primary/20 focus:shadow-lg block w-full p-2 transition duration-300"
+                          placeholder="Enter your password"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="ml-4 flex items-center justify-between">
+                      <label for="remember">
+                        <input
+                          type="checkbox"
+                          id="remember"
+                          class="bg-gray-100 border-gray-300 rounded-lg transition-colors duration-300 focus:ring-primary"
+                        />
+                        <span class="text-sm text-foreground">
+                          Remember me
+                        </span>
+                      </label>
+
+                      <a
+                        href="#"
+                        class="text-sm text-primary hover:text-primary-light transition duration-300 hover:underline"
+                        >Forgot Password?</a
+                      >
+                    </div>
+
+                    <div class="p-3">
+                      <button
+                        type="submit"
+                        class="w-full bg-primary text-white hover:opacity-90 hover:bg-primary-light font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-primary transition duration-300 hover:scale-105"
+                      >
+                        Sign In
+                      </button>
+                    </div>
+
+                    <!-- Divider for Social Login -->
+                    <div class="flex items-center mt-6 mb-4">
+                      <div class="flex-1 border-t border-border"></div>
+                      <span class="px-3 text-sm text-foreground"
+                        >or continue with</span
+                      >
+                      <div class="flex-1 border-t border-border"></div>
+                    </div>
+
+                    <!-- Social Login Buttons -->
+                    <div class="grid grid-cols-2 gap-3 mb-2">
+                      <button
+                        class="py-1 ml-3 border border-primary rounded-lg hover:bg-muted transition duration-300 hover:scale-105"
+                      >
+                        <i class="fa-brands fa-google text-primary"></i>
+                        <span class="text-sm text-primary">Google</span>
+                      </button>
+                      <button
+                        class="py-1 ml-3 border border-primary rounded-lg hover:bg-muted transition duration-300 hover:scale-105"
+                      >
+                        <i class="fa-brands fa-facebook text-primary"></i>
+                        <span class="text-sm text-primary">Facebook</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Emergency Contacts -->
+              <div
+                class="w-full max-w-md hover:shadow-lg mt-3 transition duration-300 border border-destructive/20 bg-destructive/5 rounded-lg"
+              >
+                <div class="flex text-destructive items-center p-3 gap-3">
+                  <i class="fa-solid fa-phone w-5 h-5"></i>
+                  <div>
+                    <p class="text-md">Emergency? Call Now</p>
+                    <p class="text-sm">102 (Ambulance) | 100 (Police)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Info Panel (Hidden on mobile devices) -->
+        <div
+          class="hidden lg:flex lg:flex-1 bg-gradient-to-br from-primary to-primary/70 relative overflow-hidden"
+        >
+          <!-- Background Pattern  -->
+          <div class="absolute inset-0 opacity-10 animate-pulse">
+            <div
+              class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"
+            ></div>
+            <div
+              class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"
+            ></div>
+            <div
+              class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full animate-pulse"
+            ></div>
+          </div>
+
+          <div
+            class="flex flex-col justify-center items-center text-white p-12 z-10"
+          >
+            <div class="text-center animate-fade-in">
+              <div>
+                <h2 class="text-4xl font-bold mb-4">
+                  Join Nepal's Leading Healthcare Platform
+                </h2>
+                <p class="text-xl text-white/90">
+                  Connecting patients with trusted doctors across Nepal
+                </p>
+              </div>
+
+              <!-- Stats  -->
+              <div class="grid grid-cols-2 gap-6 mt-8 animate-scale-in ">
+                <div class="text-center">
+                  <h1 class="text-3xl font-bold">10K+</h1>
+                  <p class="text-white/80">Active Patients</p>
+                </div>
+                <div class="text-center">
+                  <h1 class="text-3xl font-bold">500+</h1>
+                  <p class="text-white/80">Verified Doctors</p>
+                </div>
+                <div class="text-center">
+                  <h1 class="text-3xl font-bold">50+</h1>
+                  <p class="text-white/80">Patner Hospitals</p>
+                </div>
+                <div class="text-center">
+                  <h1 class="text-3xl font-bold">
+                    4.9<i class="fa fa-star"></i>
+                  </h1>
+                  <p class="text-white/80">User Ratings</p>
+                </div>
+              </div>
+
+              <!-- Trust Indicators  -->
+              <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">
+                  Why Choose SwasthyaMitra?
+                </h3>
+                <div class="grid grid-cols-1 gap-3 animate-slide-in-right ">
+                  <div class="flex items-start">
+                    <i class="fa-solid fa-shield"></i>
+                    <span class="ml-2">Secure & Encrypted</span>
+                  </div>
+                  <div class="flex items-start">
+                    ✔️<span class="ml-2">Verified Doctors</span>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="ml-2">Trusted by 50K+ Patients</span>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="ml-2">24/7 Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonials  -->
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-8 animate-fade-in ">
+                <!-- Ratings  -->
+                <div class="flex items-center justify-start mb-3">
+                  <i class="fa fa-star text-yellow-300"></i>
+                  <i class="fa fa-star text-yellow-300"></i>
+                  <i class="fa fa-star text-yellow-300"></i>
+                  <i class="fa fa-star text-yellow-300"></i>
+                  <i class="fa fa-star text-yellow-300"></i>
+                </div>
+                <p class="text-white/90 italic mb-3">
+                  "SwasthyaMitra made it so easy to find and book appointments
+                  with specialists. The platform is user-friendly and reliable."
+                </p>
+                <p class="text-white/70 text-sm">- Ardev Bajracharya, Dharan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
