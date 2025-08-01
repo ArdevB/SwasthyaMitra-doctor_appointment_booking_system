@@ -22,6 +22,7 @@
               primaryglow: "#e5f2ff",
               secondary: "#5b99f1",
               secondaryglow: "#e8f0fd",
+              dark_blue: "#0f1729",
               background: "#ffffff",
               muted: "#f8fafc",
             },
@@ -31,18 +32,22 @@
     </script>
   </head>
   <body>
-    <header class="shadow sticky bg-white top-0 z-50">
-      <div class="container mx-auto px-4 p-4 items-center">
-        <div class="flex justify-between">
-          <div class="flex">
+    <header class="shadow sticky border-b bg-white top-0 z-50">
+      <div class="container mx-auto p-4 items-center">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <img
+              src="./assets/images/SwasthyaMitra.png"
+              alt=""
+              class="h-10 w-auto"
+            />
             <h1
-              class="text-2xl font-medium text-primary hover:font-bold w-20 transition"
+              class="text-xl font-semibold ml-2 font-sm text-primary hover:font-bold w-20 transition duration-300"
             >
               स्वास्थ्यmitra
             </h1>
-            <!-- <img src="./assets/images/SwasthyaMitra.png" alt="" class="w-32 h-14 ">-->
           </div>
-          <nav class="flex gap-4 text-lg hidden md:flex">
+          <nav class="md:flex justify-center gap-4 text-lg hidden mt-4">
             <a href="#" class="text-md hover:text-primary transistion">Home</a>
             <a href="#" class="text-md hover:text-primary transition"
               >Find Doctors</a
@@ -58,11 +63,11 @@
               >Book Appointment</a
             >
           </nav>
-          <div class="flex gap-4 text-lg">
-            <a href="#">Login</a>
+          <div class="flex gap-4 justify-center text-lg">
+            <a href="#" class="px-4 py-2">Login</a>
             <a
               href="#"
-              class="bg-primary text-white px-1 rounded-md hover:bg-secondary transition"
+              class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition"
             >
               Sign Up</a
             >
@@ -70,15 +75,16 @@
         </div>
       </div>
     </header>
+
     <main>
       <section
         class="py-16 md:py-24 bg-gradient-to-r from-primaryglow via-background to-secondayglow"
       >
         <div class="container mx-auto px-4">
-          <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="grid lg:grid-cols-2 items-center">
             <!-- left content -->
-            <div class="md:w-1/2 mb-10">
-              <h1 class="text-4xl font-bold mb-4">
+            <div class="mb-10">
+              <h1 class="text-6xl font-bold mb-4">
                 Your Health, <span class="text-primary"> Our Priority</span>
               </h1>
               <p class="text-lg text-gray-600">
@@ -87,24 +93,18 @@
                 स्वास्थ्यmitra.
               </p>
 
-              <div class="mt-8 flex w-1  gap-3">
-                <div class="mr-2 px-12 py-3 rounded border">
-                  <h3 class="text-primary font-semibold flex justify-center">
-                    100+
-                  </h3>
-                  <p class="text-gray-600">Doctors</p>
+              <div class="mt-8 grid grid-cols-3 gap-3">
+                <div class="p-4 border rounded-lg shadow-sm">
+                  <h3 class="text-primary font-semibold text-center">100+</h3>
+                  <p class="text-gray-600 text-center">Doctors</p>
                 </div>
-                <div class="mr-2 px-12 py-3 rounded border">
-                  <h3 class="text-primary font-semibold flex justify-center">
-                    50+
-                  </h3>
-                  <p class="text-gray-600">Hospitals</p>
+                <div class="p-4 border rounded-lg shadow-sm">
+                  <h3 class="text-primary font-semibold text-center">50+</h3>
+                  <p class="text-gray-600 text-center">Hospitals</p>
                 </div>
-                <div class="mr-2 px-12 py-3 rounded border">
-                  <h3 class="text-primary font-semibold flex justify-center">
-                    30k+
-                  </h3>
-                  <p class="text-gray-600">Patients</p>
+                <div class="p-4 border rounded-lg shadow-sm">
+                  <h3 class="text-primary font-semibold text-center">30k+</h3>
+                  <p class="text-gray-600 text-center">Patients</p>
                 </div>
               </div>
               <!-- Button -->
@@ -137,8 +137,8 @@
         </div>
       </section>
       <!-- our services -->
-      <section class="py-16 md:py-24">
-        <div class="">
+      <section class="py-16 md:py-24 bg-primaryglow">
+        <div>
           <h1 class="text-4xl font-bold mb-4 text-center">
             Our Medical Services
           </h1>
@@ -147,31 +147,728 @@
             state-of-the-art facilities and experienced healthcare
             professionals.
           </p>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"
+          >
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                Cardiology
+              </h3>
+              <p class="text-gray-600 text-center">
+                Comprehensive heart care including diagnostics, treatment, and
+                preventive cardiology services.
+              </p>
+            </div>
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                Neurology
+              </h3>
+              <p class="text-gray-600 text-center">
+                Advanced neurological care for brain, spine, and nervous system
+                disorders.
+              </p>
+            </div>
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-solid fa-baby"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                Pediatrics
+              </h3>
+              <p class="text-gray-600 text-center">
+                Specialized healthcare for infants, children, and adolescents
+                with compassionate care.
+              </p>
+            </div>
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-regular fa-eye"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                Ophthalmology
+              </h3>
+              <p class="text-gray-600 text-center">
+                Complete eye care services including surgery, treatment, and
+                vision correction.
+              </p>
+            </div>
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-solid fa-bone"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                Orthopedics
+              </h3>
+              <p class="text-gray-600 text-center">
+                Expert treatment for bone, joint, and musculoskeletal system
+                conditions.
+              </p>
+            </div>
+            <div class="p-8 border rounded-lg shadow-sm bg-white">
+              <div class="text-center text-4xl mb-4">
+                <!-- img -->
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-center text-primary">
+                General Medicine
+              </h3>
+              <p class="text-gray-600 text-center">
+                Comprehensive primary healthcare and routine medical
+                examinations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- button -->
+        <div class="py-10 md:py-15">
+          <div class="mt-2 flex justify-center">
+            <a
+              href="#"
+              class="bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition"
+              >See More <span><i class="fa-solid fa-arrow-right"></i></span
+            ></a>
+          </div>
         </div>
       </section>
       <!-- about -->
       <section class="py-16 md:py-24">
-        <div class="">
-          <h2 class="text-3xl font-bold mb-4 text-center text-primary">
-            About स्वास्थ्यmitra
+        <div class="mx-auto px-4">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between mb-10"
+          >
+            <div>
+              <div>
+                <h1 class="text-4xl font-bold mb-4 text-center text-primary">
+                  About स्वास्थ्यmitra
+                </h1>
+                <p class="text-lg text-gray-600 text-center">
+                  स्वास्थ्यmitra is a leading healthcare provider in Nepal. With
+                  a commitment to excellence, we provide a wide range of medical
+                  services to meet the needs of our patients.A Nepal-focused
+                  healthcare platform built with modern technology to connect
+                  patients with qualified healthcare professionals across the
+                  country. Through advanced medical technologies, cutting-edge
+                  treatments, and a patient-centered approach, we strive every
+                  day to elevate the health and well-being of those we serve.
+                  Above all, we ensure that each patient feels respected, seen,
+                  and cared for with dignity.We commit to improving lives
+                  through state-of-the-art technologies, evidence-based
+                  innovation, and a compassionate team of professionals—serving
+                  all, regardless of background or circumstance. With advanced
+                  facilities and a multidisciplinary team, we aim to raise the
+                  standard of care—ensuring each patient's journey is safe,
+                  respectful, and results-driven.
+                </p>
+              </div>
+            </div>
+
+            <!-- Button -->
+          </div>
+          <div class="mt-2 flex justify-center">
+            <a
+              href="#"
+              class="bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition"
+              >Learn More About Us</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- popular doctors -->
+      <section class="py-16 md:py-24 bg-primaryglow">
+        <div>
+          <h2 class="text-4xl font-bold mb-4 text-center text-primary">
+            Popular Doctors
           </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- dooctor1 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div class=" p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white">
+            <div>
+              <img src="./assets/images/doctor_male.png" alt="" />
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold">Dr. Mrigendra Raj Pandey</h2>
+              <p class="text-sm text-gray-600">Senior and First Cardiologist</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- doctor2 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img src="./assets/images/doctor_male.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Sanduk Ruit</h2>
+              <p class="text-sm text-gray-600">
+                Senior and Famous ophthalmologist
+              </p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- doctor 8-->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img
+                src="./assets/images/doctor_female.jpg"
+                alt=""
+                class="w-full h-64"
+              />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Anju Shrestha</h2>
+              <p class="text-sm text-gray-600">Orthopedics</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--doctor 3 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img src="./assets/images/doctor_male.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Babu Ram Pokharel</h2>
+              <p class="text-sm text-gray-600">Senior and First Neurologist</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--doctor 4 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img src="./assets/images/doctor_male.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Vinayak Regmi</h2>
+              <p class="text-sm text-gray-600">Specialist in Pediatrics</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--doctor 5 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img src="./assets/images/doctor_male.png" alt="" />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Prof. Dr. Shishir Lakhey</h2>
+              <p class="text-sm text-gray-600">Senior Orthopedics</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- doctor 6 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img
+                src="./assets/images/doctor_female.jpg"
+                alt=""
+                class="w-full h-64"
+              />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Prena Jha</h2>
+              <p class="text-sm text-gray-600">General Medicine</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- doctor 7 -->
+        <div class="mx-auto container p-4 flex justify-center">
+          <div
+            class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300 bg-white"
+          >
+            <div class="">
+              <img
+                src="./assets/images/doctor_female.jpg"
+                alt=""
+                class="w-full h-64"
+              />
+            </div>
+            <div class="">
+              <h2 class="text-xl font-semibold">Dr. Yesha Amatya</h2>
+              <p class="text-sm text-gray-600">Pediatrics</p>
+            </div>
+            <div class="mt-4 flex flex-col md:flex-row gap-3 text-center">
+              <a
+                href="#"
+                class="py-3 px-4 rounded-md text-primary border border-primary hover:bg-primary hover:text-white transition"
+              >
+                Book Appointment
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- testimonials -->
+      <section class="py-16 md:py-24">
+        <div>
+          <h2
+            class="text-4xl font-bold mb-4 text-center text-primary mt-10 mb-10"
+          >
+            What Our Patients Say
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
+          <!-- patient 1 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Daniyal Acharya</h2>
+                <p class="text-sm text-gray-600">
+                  "The care I received was exceptional. The staff was
+                  professional, caring, and made me feel comfortable throughout
+                  my entire stay."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 2-->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Michael Chen</h2>
+                <p class="text-sm text-gray-600">
+                  "From the moment I walked in, I felt welcomed and cared for.
+                  The nursing staff went above and beyond to ensure my comfort."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 3 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">David Thompson</h2>
+                <p class="text-sm text-gray-600">
+                  "The physical therapy team helped me recover faster than I
+                  expected. Their expertise and encouragement made all the
+                  difference."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 4 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Lisa Park</h2>
+                <p class="text-sm text-gray-600">
+                  "The diagnostic team was thorough and efficient. They found
+                  the issue quickly and developed an effective treatment plan."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 5 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Robert Williams</h2>
+                <p class="text-sm text-gray-600">
+                  "I've never experienced such compassionate care. The entire
+                  medical team treated me like family during a difficult time."
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 6 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Ravi Gupta</h2>
+                <p class="text-sm text-gray-600">
+                  “The doctors were friendly, the staff always helpful, and they
+                  made sure every step—from prep to surgery to follow‑up—was
+                  seamless. Truly excellent care.”
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 7-->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Anjali Sharma</h2>
+                <p class="text-sm text-gray-600">
+                  “I was seen quickly at the OPD, the staff treated me kindly,
+                  and they explained everything clearly. Such responsiveness
+                  made me feel respected.”
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- patient 8 -->
+          <div class="mx-auto container p-4 flex justify-center">
+            <div
+              class="p-8 border rounded-lg shadow-sm hover:shadow-lg transistion duration-300"
+            >
+              <div>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+              </div>
+              <div class="">
+                <h2 class="text-xl font-semibold">Sunita Yadav</h2>
+                <p class="text-sm text-gray-600">
+                  “Labor room team was attentive, the entry process smooth, and
+                  the follow‑up was prompt. I felt safe and cared for at every
+                  turn.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- How It Works -->
+      <section class="py-16 md:py-20 bg-primaryglow">
+        <div class="">
+          <h2 class="text-4xl font-bold mb-4 text-center">How It Works</h2>
           <p class="text-lg text-gray-600 text-center">
-            A Nepal-focused healthcare platform built with modern technology to
-            connect patients with qualified healthcare professionals across the
-            country. Through advanced medical technologies, cutting‑edge
-            treatments, and a patient‑centered approach, we strive every day to
-            elevate the health and well‑being of those we serve. Above all, we
-            ensure that each patient feels respected, seen, and cared for with
-            dignity.We commit to improving lives through state‑of‑the‑art
-            technologies, evidence‑based innovation, and a compassionate team of
-            professionals—serving all, regardless of background or circumstance.
-            With advanced facilities and a multidisciplinary team, we aim to
-            raise the standard of care—ensuring each patient’s journey is safe,
-            respectful, and results‑driven.
+            Healthcare made simple in just 4 easy steps. From booking to
+            follow-up, we've got you covered.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          <div class="p-8 border rounded-lg shadow-sm bg-white">
+            <div class="text-center text-4xl mb-4">
+              <!-- img -->
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center text-primary">
+              Find Your Doctor
+            </h3>
+            <p class="text-gray-600 text-center">
+              Search from 100+ verified doctors across 50+ specialties. Filter
+              by location, availability, and ratings.
+            </p>
+          </div>
+          <div class="p-8 border rounded-lg shadow-sm bg-white">
+            <div class="text-center text-4xl mb-4">
+              <!-- img -->
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center text-primary">
+              Book Appointment
+            </h3>
+            <p class="text-gray-600 text-center">
+              Choose your preferred time slot and book instantly. Get
+              confirmation within minutes via SMS and email.
+            </p>
+          </div>
+          <div class="p-8 border rounded-lg shadow-sm bg-white">
+            <div class="text-center text-4xl mb-4">
+              <!-- img -->
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center text-primary">
+              Meet Your Doctor
+            </h3>
+            <p class="text-gray-600 text-center">
+              Attend your appointment virtually or in-person. Access medical
+              records and prescriptions digitally.
+            </p>
+          </div>
+          <div class="p-8 border rounded-lg shadow-sm bg-white">
+            <div class="text-center text-4xl mb-4">
+              <!-- img -->
+              <i class="fa-regular fa-square-check"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-center text-primary">
+              Follow-up Care
+            </h3>
+            <p class="text-gray-600 text-center">
+              Receive follow-up reminders, medication alerts, and access to your
+              complete health history.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- last part -->
+      <section class="py-16 md:py-20 p-8 bg-dark_blue">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-4 text-white">
+            Your Health Journey Starts Here
+          </h2>
+          <p class="text-lg text-white">
+            Join thousands of satisfied patients on स्वास्थ्यmitra. Book
+            appointments, get consultations, and manage your health journey with
+            ease.
+          </p>
+        </div>
+        <!-- button -->
+        <div class="mt-8 flex justify-center">
+          <a
+            href="#"
+            class="bg-primary text-white py-3 px-4 rounded-md hover:bg-secondary transition"
+          >
+            Book Appointment Now</a
+          >
+        </div>
+        <div class="flex justify-center gap-4">
+          <p class="text-center mt-4 gap-4 text-white">
+            <i class="fa-solid fa-circle-dot text-green-500"></i>Free
+            Consulation Available
+          </p>
+          <p class="text-white mt-4">
+            <i class="fa-solid fa-circle-dot text-blue-500"></i>24/7 Emergency
+            Services
+          </p>
+          <p class="text-white mt-4">
+            <i class="fa-solid fa-circle-dot text-red-500"></i> Verified Doctors
+            Only
           </p>
         </div>
       </section>
     </main>
-    <footer></footer>
+
+    <footer>
+      <section class="py-16 md:py-20 p-8 bg-primary">
+        <div class="grid grid-cols-4 gap-7 text-white">
+          <div>
+            <div class="">
+              <img
+                src="./assets/images/SwasthyaMitra2.png"
+                alt=""
+                class="h-14 w-auto"
+              />
+            </div>
+            <div>
+              <p>
+                Connecting patients with qualified healthcare professionals
+                across Nepal. Your health, our priority.
+              </p>
+            </div>
+            <div>
+              <p class="hover:text-dark_blue transition">
+                <i class="fa-solid fa-phone"></i> Emergency: 102
+              </p>
+              <p class="hover:text-dark_blue transition">
+                <i class="fa-solid fa-envelope"></i> support@स्वास्थ्यmitra.com
+              </p>
+              <p class="hover:text-dark_blue transition">
+                <i class="fa-solid fa-location-dot"></i> Serving all 77
+                districts of Nepal
+              </p>
+            </div>
+          </div>
+          <div class="mt-2">
+            <h3 class="text-xl font-semibold">For Patients</h3>
+            <p class="mt-4 hover:text-dark_blue transition">Find a Doctor</p>
+            <p class="hover:text-dark_blue transition">Book an Appointment</p>
+            <p class="hover:text-dark_blue transition">Emergency Services</p>
+            <p class="hover:text-dark_blue transition">Health Articles</p>
+          </div>
+          <div class="mt-2">
+            <h3 class="text-xl font-semibold">For Doctors</h3>
+            <p class="mt-4 hover:text-dark_blue transition">
+              Doctor Registration
+            </p>
+            <p class="hover:text-dark_blue transition">Doctor Portal</p>
+            <p class="hover:text-dark_blue transition">Manage Schedule</p>
+            <p class="hover:text-dark_blue transition">Patient Records</p>
+          </div>
+          <div class="mt-2">
+            <h3 class="text-xl font-semibold">Support</h3>
+            <p class="mt-4 hover:text-dark_blue transition">Help Center</p>
+            <p class="hover:text-dark_blue transition">Contact Support</p>
+            <p class="hover:text-dark_blue transition">Terms of Service</p>
+            <p class="hover:text-dark_blue transition">Privacy Policy</p>
+          </div>
+        </div>
+
+        <!-- Emergency Button -->
+        <div class="bg-secondary p-4 rounded-lg mb-8 mt-6">
+          <a
+            href="tel:102"
+            class="flex items-center justify-center space-x-4 text-white font-semibold text-lg"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <span>Emergency? Call 102 for immediate ambulance service</span>
+          </a>
+        </div>
+
+        <!-- Bottom Footer  -->
+        <div class="border-t border-primary-foreground/20 pt-8">
+          <div
+            class="flex flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="text-white">
+              <p>© 2025 स्वास्थ्यmitra. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6">
+              <a
+                href="#"
+                class="text-primary-foreground/80 hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-primary-foreground/80 hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
