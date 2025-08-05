@@ -4,14 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SwasthyaMitra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon  -->
     <link
       rel="shortcut icon"
-      href="./assets/images/SwasthyaMitra.png"
+      href="/assets/images/SwasthyaMitra.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Font Awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1f8fff",
+              primaryglow: "#e5f2ff",
+              primarylight: "#66b3ff",
+              secondary: "#5b99f1",
+              secondaryglow: "#e8f0fd",
+              background: "#ffffff",
+              muted: "#f8fafc",
+              foreground: "#344256",
+              destructive: "#ef4444",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <h1>Hello Patient</h1>
-  </body>
+  <body></body>
 </html>
